@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <conio.h>
+
+void main() {
+
+     int name;
+     char a = 'a';
+     char b = 'e';
+     char c = 'i';
+     char d = 'o';
+     char e = 'u';
+
+
+     clrscr();
+
+     printf("enter the character");
+     scanf("%d",&name);
+
+     if(name==a || name==b ||name==c ||name==d ||name==e){
+       printf("character is vowel");
+     }
+     else{
+       printf("character is consonat");
+     }
+
+}

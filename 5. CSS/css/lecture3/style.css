@@ -1,0 +1,159 @@
+
+.rgb_value{
+    color: rgb(255,0,122);
+}
+
+.hex_value{
+    color: #ff0011;
+    background-color: #f0f0f0;
+}
+
+.hsl_value{
+    color: hsl(120, 100%, 50%);
+}
+
+.rgba_value{
+    color: rgba(255, 120, 0, .5);
+}
+
+.hsla_value{
+   color:  hsla(120, 100%, 50%, 0.2);;
+}
+
+
+/* border */
+
+.btn{
+    border: 2px solid red;
+}
+
+.btn1{
+    /* border radius  */
+    height: 50px;
+    width: 50px;
+    border-radius: 10px 2px 5px 5px;
+    border: 2px dotted green;
+}
+
+.btn2{
+    border: 2px double green;
+}
+
+.btn3{
+    border: 2px dashed green;
+}
+
+.btn4{
+    border: 2px groove green;
+}
+
+.btn5{
+    border: 2px ridge green;
+}
+
+.btn6{
+    border: 2px inset green;
+}
+
+.btn7{
+    border: 2px outset green;
+}
+.btn8{
+    border: 2px hidden green;
+}
+
+.btn9{
+    border: 2px none green;
+}
+
+
+/* outline  */
+
+.outline_btn{
+    border: 2px solid rgb(65, 79, 72);
+    margin-left: 30px;
+    background-color: rgb(190, 198, 42);
+    height: 50px;
+    width: 50px;
+    outline: 2px solid black;
+    outline-offset: 20px;
+}
+
+/* opacity */
+
+.opacity{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.class1{
+    height: 100px;
+    width: 100px;
+    background-color: red;
+    opacity: .1;
+}
+
+.class2{
+    height: 100px;
+    width: 100px;
+    background-color: red;
+    opacity: .2;
+}
+
+.class3{
+    height: 100px;
+    width: 100px;
+    background-color: red;
+    opacity: .3;
+}
+
+.class4{
+    height: 100px;
+    width: 100px;
+    background-color: red;
+    opacity: .4;
+}
+
+.class5{
+    height: 100px;
+    width: 100px;
+    background-color: red;
+    opacity: .5;
+}
+
+.class6{
+    height: 100px;
+    width: 100px;
+    background-color: red;
+    opacity: .6;
+}
+
+.class7{
+    height: 100px;
+    width: 100px;
+    background-color: red;
+    opacity: .7;
+}
+
+.class8{
+    height: 100px;
+    width: 100px;
+    background-color: red;
+    opacity: .8;
+}
+
+.class9{
+    height: 100px;
+    width: 100px;
+    background-color: red;
+    opacity: .9;
+}
+
+.class10{
+    height: 100px;
+    width: 100px;
+    background-color: red;
+    opacity: 1;
+}

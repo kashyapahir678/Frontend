@@ -1,0 +1,29 @@
+#include <stdio.h>
+#include <conio.h>
+
+void main(){
+
+     int tax;
+     float slab;
+
+     clrscr();
+     printf("enter the tax");
+     scanf("%d",&tax);
+
+     if(tax<2500){
+       slab=(tax*0)/100;
+       printf("tax is %.2f",slab);
+     }
+     else if(tax>2500 && tax<5000){
+       slab=(tax*10)/100;
+       printf("tax is %.2f",slab);
+     }
+     else if(tax>5000 && tax<10000){
+       slab=(tax*20)/100;
+       printf("tax is %.2f",slab);
+      }
+     else{
+      slab=(tax*30)/100;
+      printf("tax is %.2f",slab);
+    }
+}

@@ -1,0 +1,168 @@
+/* The animation shorthand CSS property applies an animation between styles. It is a shorthand for animation-name, animation-duration, animation-timing-function, animation-delay, animation-iteration-count, animation-direction, animation-fill-mode, animation-play-state, and animation-timeline. */
+
+
+/* LongHand Properties */
+
+/*
+border-width:2px
+border-style:solid;
+border-color:black;
+*/
+
+.box{
+    /* height: 200px;
+    width: 200px;
+    border-style:solid;
+    border-width:5px;
+    border-color:black; */
+    /* border:10px dotted green; */
+}
+
+/* Animation-Properties */
+
+/*
+ Animation-name
+ Animation-direction
+ Animation-duration
+ Animation-delay
+ Animation-iteration-count
+ Animation-play-state
+ Animation-@keyframes
+ Animation-timing-functions
+ Animation-fillmode
+*/
+
+.box{
+    /* animation-name: running;
+    animation-duration: 10s; */
+    /* animation-iteration-count: infinite; */
+    /* animation-timing-function: linear; */
+    /* animation-direction: reverse; */
+    /* animation-play-state:running; */
+    /* animation-fill-mode: backwards; */
+}
+/* 
+@keyframes running{
+    from{
+        transform: translate(0px);
+    }
+    to{
+        transform: translate(1200px);
+    }
+} */
+
+/* @keyframes running{
+    0%{
+        transform: rotate(0deg);
+    }
+    25%{
+        transform: rotate(180deg);
+    }
+    50%{
+        transform: translate(0px);
+    }
+    75%{
+        transform: translate(900px);
+    }
+    100%{
+        transform: scale(2);
+    }
+} */
+
+/* h1{
+    font-size: 60px;
+    text-align: center;
+} */
+
+
+.animation{
+    height: 500px;
+    width: 1000px;
+    position: relative;
+    top: 300px;
+    overflow: hidden;
+}
+
+.img1{
+    height: auto;
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+}
+
+.img2{
+    height: 100px;
+    /* overflow: hidden; */
+    width: 100px;
+    position: absolute;
+    left: 58%;
+    top: 0%;
+    z-index: 2;
+    font-size: 4rem;
+    color: orange;
+    animation-name: sun;
+    animation-duration: 2s;
+    animation-iteration-count: 2;
+    animation-timing-function: linear;
+    animation-direction: reverse;
+    overflow: m   v ;
+}
+
+@keyframes sun{
+    from{
+        transform: translateY(0px)
+    }
+    to{
+        transform: translateY(300px);
+    }
+}
+
+.img3{
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    top: 14%;
+    z-index: 2;
+    animation-name: cloud;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    color: silver;
+    font-size: 4rem;
+}
+
+i:nth-last-child(2){
+    color: silver;
+    top: 15%;
+    left: 80%;
+    animation-direction: alternate-reverse;
+}
+
+i:nth-last-child(4){
+    color: silver;
+    top: 25%;
+    left: 55%;
+    animation-direction: alternate;
+}
+
+i:nth-last-child(3){
+    color: silver;
+    top: 10%;
+    left: 50%;
+    animation-direction: normal;
+}
+
+@keyframes cloud{
+    from{
+        transform: translateX(0px);
+    }
+    to{
+        transform: translateX(1200px);
+    }
+}
+
+
+
+
+

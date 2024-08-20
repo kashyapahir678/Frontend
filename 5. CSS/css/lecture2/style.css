@@ -1,0 +1,38 @@
+
+
+/* cascade  */
+
+/* p{
+    color: green;
+    background-color: aqua;
+    color: blue;
+} */
+
+ /* specify */
+
+#specify_id{
+    color: rgb(133, 118, 118);
+    background-color: rgb(209, 121, 13);
+}
+
+.specify_class{
+    color: aqua;
+    background-color: black;
+}
+
+h5{
+    color: red;
+    background-color: blue;
+}
+
+/* inheritance  */
+
+.parent{
+    color: gold;
+    background-color: black;
+}
+
+h1, h6, span {
+    color: yellow;
+    background-color: rgb(176, 165, 161);
+}

@@ -1,0 +1,93 @@
+
+.font-weight{
+    font-weight: 700;
+}
+
+.font-size{
+    font-size: smaller;
+}
+
+.font-family{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.font-style{
+    font-style: italic;
+}
+
+.font-varient{
+    font-variant: small-caps;
+}
+
+.text-align{
+    text-align: center;
+}
+
+.text-decoration{
+    text-decoration: overline;
+    /* text-decoration: none; */
+}
+
+.text-transform{
+    text-transform: uppercase;
+}
+
+.text-shadow{
+    text-shadow: 3px 3px 2px blue;
+}
+
+.text-spacing{
+    letter-spacing: 20px;
+}
+
+.white-spac{
+    white-space: pre;
+}
+
+.ver-align{
+    vertical-align: sub;
+}
+
+.margin1{
+    height: 100px;
+    width: 100px;
+    background-color: lightcoral;
+    margin: 50px;
+}
+
+.margin2{
+    height: 100px;
+    width: 100px;
+    background-color: lightgreen;
+    margin-top: 20px;
+}
+
+.margin3{
+    height: 100px;
+    width: 100px;
+    background-color: lightseagreen;
+    margin: 50px;
+}
+
+
+.padding1{
+    height: 100px;
+    width: 100px;
+    background-color: yellow;
+    padding: 50px;
+}
+
+.padding2{
+    height: 100px;
+    width: 100px;
+    background-color: brown;
+    color: white;
+    padding-top: 20px;
+}
+
+.padding3{
+    height: 100px;
+    width: 100px;
+    background-color: rgb(5, 221, 45);
+    padding: 10px;
+}

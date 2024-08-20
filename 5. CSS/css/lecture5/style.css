@@ -1,0 +1,46 @@
+
+
+/* .link:link{
+    color: blueviolet;
+} */
+
+.link:visited{
+    color: burlywood;
+}
+
+p:first-child{
+    color: rgb(226, 20, 206);
+}
+
+.parent:last-child{
+    color: rgb(226, 20, 206);
+}
+
+
+/* .parent:nth-child(odd){
+    color: red;
+} */
+ 
+
+.btn{
+    color: black;
+    background-color: aqua;
+}
+
+/* hover  */
+
+/* .btn:hover{
+    color: white;
+    background-color: black;
+} */
+
+/* active  */
+
+.btn:active{
+    color: white;
+    background-color: black;
+}
+
+/* :root{
+    background-color: black;
+} */

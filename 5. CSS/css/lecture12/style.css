@@ -1,0 +1,46 @@
+
+.pagination{
+    display: inline-block;
+    margin-top: 50px;
+    margin-left: 50px;
+    margin-bottom: 200px;
+}
+
+.pagination a{
+    font-size: 25px;
+    color: black;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 50%;
+    padding: 20px;
+    text-decoration: none;
+    cursor: pointer;
+    margin: 10px;
+}
+
+.pagination a:hover{
+    color: white;
+    background-color: orangered;
+}
+
+
+select{
+
+    display: block;
+    margin: auto;
+    padding: 10px;
+}
+
+option{
+    padding: 10px;
+    border: 1px solid yellow;
+    color: red;
+    background-color: black;
+    color: antiquewhite;
+    font-size: larger;
+}
+
+option:hover{
+   color: black;
+   background-color: wheat;
+}

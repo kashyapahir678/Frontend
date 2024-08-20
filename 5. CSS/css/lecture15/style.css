@@ -1,0 +1,44 @@
+
+.object-fit img{
+    height: 500px;
+    width: 500px;
+    /* object-fit: contain; */
+    /* object-fit: cover; */
+    /* object-fit: fill; */
+    /* object-fit: scale-down; */
+    /* object-position: bottom; */
+}
+
+.overlay-section{
+    height: 400px;
+    width: 400px;
+    overflow: hidden;
+    position: relative;
+}
+
+.overlay-section .img1{
+    object-position: right;
+    object-fit: cover;
+    position: absolute;
+}
+
+.overlay-section:hover .img1{
+    filter: blur(5px);
+}
+
+.overlay{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-color: rgba(0, 0, 0, .3);
+}
+
+.overlay-section:hover .overlay_text{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    color: white;
+    font-weight: bold;
+    font-family: Futura PT;
+}

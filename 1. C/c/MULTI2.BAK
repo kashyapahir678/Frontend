@@ -1,0 +1,18 @@
+
+#include <stdio.h>
+#include <conio.h>
+
+xvoid main() {
+
+   int i;
+   int n;
+  int total=1;
+   clrscr();
+   printf("enter the number");
+   scanf("%d",&n);
+
+   for(i=1;i<=n;i++){
+      total=total*2;
+      printf("%d \t",total);
+   }
+}

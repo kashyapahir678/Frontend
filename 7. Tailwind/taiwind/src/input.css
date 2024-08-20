@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components{
+    .card{
+        @apply max-w-sm rounded overflow-hidden shadow-lg m-2 bg-slate-200;
+    }
+    .btn{
+        @apply px-4 py-1 bg-gray-800 hover:bg-gray-500 text-white rounded-lg font-bold;
+    }
+}

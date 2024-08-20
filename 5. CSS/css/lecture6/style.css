@@ -1,0 +1,46 @@
+
+.elem_latter::first-letter{
+    color: blue;
+    font-size: 20px;
+}
+
+.elem_line::first-line{
+    color: red;
+}
+
+.selction::selection{
+    color: gold;
+    background-color: black;
+}
+
+.para::before{
+    content: " * ";
+    color: red;
+    font-size: 20px;
+}
+
+.para::after{
+    content: " * ";
+    color: rgb(83, 15, 241);
+    font-size: 20px;
+}
+
+
+ /* background properties  */
+
+ .bg_prop{
+    background-image: url("https://images.pexels.com/photos/26442630/pexels-photo-26442630/free-photo-of-a-row-of-empty-seats-in-a-stadium.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load");
+    background-repeat: no-repeat;
+    /* background-repeat: inherit; parent */
+    /* background-repeat: initial;  by default browser */   
+    background-size: contain;
+    height: 500px;
+    width: 100%;
+    /* background-size: cover; */
+    /* background-position: top right; */
+    /* background-position: center; */
+    /* background-attachment: fixed; */
+    /* background-attachment: scroll; */
+
+    
+ }

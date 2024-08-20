@@ -1,0 +1,33 @@
+  #include <stdio.h>
+  #include <conio.h>
+
+  void main() {
+
+      int unit;
+      float total=0;
+      float bill=0;
+
+      clrscr();
+
+      printf("enter the unit");
+      scanf("%d",&unit);
+
+      if(unit<100){
+	total=unit*.60+50;
+	printf("price is %.2f",total);
+      }
+      else if(unit>100&&unit<=200){
+	total=unit*.80+50;
+	printf("price is %.2f",total);
+      }
+
+      else if(unit>200&&unit<=300){
+       total=unit*.90+50;
+       printf("price is %.2f",total);
+     }
+     if(total>300){
+       bill=total+(total*15/100);
+       printf("\n bill is %.2f",bill);
+      }
+
+}

@@ -1,0 +1,25 @@
+
+.maindiv{
+    max-width: 1200px;
+    display: flex;
+    background-color: aquamarine;
+}
+
+.maindiv div{
+    flex-grow: 1 ;
+    /* flex-basis: 150px; */    
+    /* flex-shrink: 1;   */
+    border: 1px solid black;
+    text-align: center;
+}
+
+.maindiv div:first-child{
+    color: red;
+    flex-basis: 300px;  
+}
+
+.maindiv div:last-child{
+    color: yellow;
+    border: 1px solid rgb(255, 8, 8);
+    flex-shrink: 5;
+}

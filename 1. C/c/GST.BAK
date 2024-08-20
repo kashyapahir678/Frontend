@@ -1,0 +1,26 @@
+
+#include <stdio.h>
+#include <conio.h>
+
+void main() {
+
+   int rate,qty;
+   int gst=18;
+   int total;
+   float dis;
+
+   clrscr();
+   printf("enter the rate:");
+   scanf("%d", &rate);
+
+   printf("enter the qty:");
+   scanf("%d", &qty);
+
+  total=rate*qty;
+
+  dis=(5*100.0)/total;
+
+  printf("rate \t qty \t amt \t dis5% \n");
+  printf("%d \t %d \t %d \t %f", rate,qty,total,dis);
+
+}
