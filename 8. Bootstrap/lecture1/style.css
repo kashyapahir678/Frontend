@@ -1,10 +1,10 @@
 
 .col{
     border: 1px solid black;
+    width: 300px;
 }
 
 .col-3{
     border: 1px solid black;
     height: 300px;
-    /* width: 300px; */
 }
