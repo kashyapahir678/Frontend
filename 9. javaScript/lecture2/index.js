@@ -27,3 +27,19 @@
  
     // Array 
     // Object 
+
+
+    // before Es5 
+
+    // var a = "50"
+    // console.log(a)
+
+    // {
+    //     var a = "20";
+    //     console.log(a)-
+    // }
+    // console.log(a)
+
+    // after Es6
+        document.getElementById("box").innerHTML = "This is javascript"
+        document.getElementById("box").style.color = "red"
