@@ -71,6 +71,17 @@
 //     console.log(str);
 // }
 
+//Binary operator 
+
+// {
+//     let x = !(0);
+//     let b = !(1);
+
+//     console.log(x);
+//     console.log(y);
+    
+// }
+
 //Turnary Operator  - ? :
 
 // {
