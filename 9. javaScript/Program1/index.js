@@ -30,3 +30,37 @@
 // const CelToFahr = (n*9 / 5 + 32);
 
 // console.log(CelToFahr);
+
+
+
+// 4.Find the remainder when one number is divided by another
+
+// {
+//   let a = 10
+//   let b = 2
+
+//   let c = a % b
+
+//   console.log(c);
+
+// }
+
+
+//   5.Calculate the power of a number
+
+// {
+  
+//   let n = 2
+  
+//   let power = 5
+  
+//   let num = 1;
+//   for (let i = 0; i < power; i++) {
+//     num = num * n;
+//   }
+//   console.log(num)
+// }
+
+
+//   6.Combination of Arithmetic Operators
+
