@@ -1,7 +1,6 @@
 
 // 1. write a program that calculates the sum of all numbers from 1 to 100 using a for loop in js
 
-// const number = 100;
 
 // let sum = 0;
 
@@ -88,18 +87,13 @@
 
 // 8. Write a program that counts the number of vowels in a given string.
 
-let name5 = "meet"; 
+let name5 = "hello world"; 
 let arr5 = ['a','e','i','o','u']
-let length = 0;
 
+let leng = 0;
 for(let i=1; i<=name5.length; i++){
     if(arr5[0] == name5[i] || arr5[1] == name5[i] || arr5[2] == name5[i] || arr5[3] == name5[i] || arr5[4] == name5[i]){
-        // length += 1;
-        console.log(length+1)
+        leng += 1; 
     }
-    else{
-        length=0;
-    }
-    
 }
-console.log(length, "length")
+console.log("length",leng)

@@ -34,7 +34,6 @@
 
 
 
-
 // For in loop in javascript 
 
 let obj = {1: '11', 2: "22"}
@@ -53,6 +52,6 @@ let obj2 = new Object({1: "111", 2: '222'})
 // console.log(obj2['2'])
 // console.log(obj['1'])
 
-// for(let key in obj){
-//     console.log(`${key} = ${obj[key]}`)
-// }
+for(let key in obj){
+    console.log(`${key} = ${obj[key]}`)
+}
