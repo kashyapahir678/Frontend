@@ -17,6 +17,7 @@
 // Math.cos()
 // Math.log()
 // Math.log10()
+
 // Math.log2()
 
 /* Static properties */
