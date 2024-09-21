@@ -16,9 +16,7 @@
     console.log(array2)
 
     let array3 = array.copyWithin(0 , 2 , 4)
-
     console.log(array3);
-
 }
 
 // Array.prototype.entries()
