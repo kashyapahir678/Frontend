@@ -101,4 +101,20 @@ console.log("5 Kilometer = ", miles)
     }
 }
 
-// 12. 
+// 12. Javascript Program to find the largest Among Three number 
+
+let a = 10;
+let b = 50;
+ let c = 30;
+
+ if(a > b && a > c){
+    console.log("A is largest")
+ }
+ else if(b > a && b > c ){
+    console.log("B is largest")
+ }
+ else{
+    console.log("C is largest")
+ }
+
+//  13. 
