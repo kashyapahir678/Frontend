@@ -117,4 +117,36 @@ let b = 50;
     console.log("C is largest")
  }
 
-//  13. 
+//  13.  JavaScript Program to Check Prime Number 
+
+{
+    // let num = 20;
+}
+
+// 14.  javascript program to print all prime number to interval 
+
+{
+
+}
+
+// 15. javascript program to find factroial of a number 
+
+{
+    let ans = 1;
+
+    function factroial(n) {
+        if(n == 0)
+            return 1;
+        for(i =2; i <=n; i++){
+            ans = ans*i;
+        }
+        return ans;
+    }
+}
+// console.log(factroial(5));
+
+// 16. javascript program to display multipacation table 
+
+{
+    
+}
