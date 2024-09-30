@@ -253,7 +253,7 @@ console.log(sum)
 // 22. JavaScript Program to Check if the Numbers Have Same Last Digit
 
 {
-    const a = 11;
+    const a = 30;
     const b = 22;
     const c = 30;
 
@@ -282,5 +282,65 @@ console.log(sum)
 // 26 .JavaScript Program to Find Sum of Natural Numbers Using Recursion
 
 {
+    function sum(n) {
+        if (n !== 0){
+            return n + sum(n-1)
+        }
+        else{
+            return n;
+        }
+    }
 
+    let n = 10;
+    console.log(sum(n))
+}
+
+// 27 . Javascript program to guess random number 
+
+{
+    let random = Math.trunc(Math.random()*10);
+    console.log(random)
+}
+
+// 28. Javascript program to suffle deck of cards 
+
+// 29. JavaScript Program to Display Fibonacci Sequence Using Recursion
+
+{
+    let n = 5;
+
+    function Fibonacci(n) {
+        if(n < 2){
+            return n;
+        }
+        else{
+            return Fibonacci(n-1) + Fibonacci(n-2);
+        }
+    }
+
+    if(n <= 0){
+        console.log("Enter a positive number")
+    }
+    else{
+        for(let i=0; i<n; i++){
+            console.log(Fibonacci(i))
+        }
+    }
+}
+
+// 30. JavaScript Program to Find Factorial of Number Using Recursion
+
+// 31. JavaScript Program to Convert Decimal to Binary
+
+{
+    let num = 30.56;
+
+    let result = Math.trunc(num);
+    console.log(result)
+}
+
+// 32. JavaScript Program to Find ASCII Value of Character
+
+{
+    
 }
