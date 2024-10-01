@@ -333,14 +333,228 @@ console.log(sum)
 // 31. JavaScript Program to Convert Decimal to Binary
 
 {
-    let num = 30.56;
+    let number = 50;
 
-    let result = Math.trunc(num);
-    console.log(result)
+    console.log(number.toString(2))
 }
 
 // 32. JavaScript Program to Find ASCII Value of Character
 
 {
-    
+    let string = "A";
+
+    const result = string.charCodeAt(string);
+
+    console.log(result)
 }
+
+// 33. Javascript program check whether a string palidrone or Not 
+
+ {
+    
+ }
+
+// 34. Javscript program to Sort words in Alpabetical Order 
+
+{
+    let string = "this is javscript sort word";
+
+    let word = string.split(' ');
+
+    let sort = word.sort()
+
+    let join = sort.join(" ")
+
+    console.log(join)
+}
+
+// 35. Javascript program to replace character of strings 
+
+{
+    let string = "This is Python strings method";
+
+    let replacestr =  string.replace("Python","Javscript");
+
+    console.log("old",string, "new = ", replacestr)
+}
+
+// 36. Javascript program to reverse a string 
+
+{
+    let string = "Hello world!!!";
+
+    let splitStr = string.split("")
+    let reverseStr = splitStr.reverse();
+    let joinStr = splitStr.join(" ");
+
+    console.log(joinStr)
+}
+
+// 37. Javscript program to create object in differnet ways 
+
+{
+    // way 1 
+    const person = {
+        name : "hello",
+        age : 22,
+        hobbies : "coding"
+    }
+    console.log(typeof person)
+
+    // way 2
+    const person2 = new Object({
+        name : "hello",
+        age : 22,
+        hobbies : "coding"
+    })
+    console.log(typeof person2)
+}
+
+// 38. Javscript peogramt to check the number of Occurrences of a character in the string 
+
+{
+    // let name = school;
+
+}
+
+// 39. Javscript program to convert the first letter of a string into uppercase 
+
+{
+    let string = "javscript";
+    console.log(string)
+    console.log(string.charAt(0).toUpperCase() + string.slice(1));
+}
+
+// 40. Javscript program to count the number of vowels in a string 
+
+{
+    let str = "hello world!!!";
+    const vowel = ['a','e','i','o','u'];
+    let count = 0;
+
+    for(let letter of str.toLowerCase()){
+        if(vowel.includes(letter)){
+            count++;
+        }
+    }
+    console.log(count)
+}
+
+// 41. javscript program to remove property from a object 
+
+{
+    const person = {
+        name : "hello",
+        age : 22,
+        hobbies : "coding"
+    }
+    delete person.hobbies;
+
+    console.log(person)
+}
+
+// 42. javscript program to check whether a string starts and ends with certain characters 
+
+{
+    // let regex = /a
+}
+
+// 43. javscript program to check if a key exists in an object 
+
+{
+    const person = {
+        name : "hello",
+        age : 22,
+        hobbies : "coding"
+    }
+
+    const key = "name" in person;
+    if(key){
+        console.log("key is exists")
+    }
+    else{
+        console.log("key not exists")
+    }
+}
+
+// 44. javascript program to clone a js object 
+
+{
+    const person = {
+        name : "hello",
+        age : 22,
+        hobbies : "coding"
+    }
+
+    const clone = Object.assign({}, person);
+    console.log(clone)
+
+    clone.name = "peru";
+
+    console.log(clone.name)
+    console.log(person)
+}
+
+// 45. Javascript program to loop through an object 
+
+{
+    const person = {
+        name : "hello",
+        age : 22,
+        hobbies : "coding"
+    }
+
+    for(let key in person){
+        let value;
+        value = person[key]
+        console.log(key + " " + value)
+    }
+}
+
+// 46. Javscript program to merge peroperty of two object 
+
+{
+    const person = {
+        name : "hello",
+    }
+    const person2 = {
+        gender : 'male'
+    }
+
+    const merge = Object.assign(person,person2);
+    console.log(merge)
+}
+
+// 47. Javascript program to count the Number of keys properies in an object
+
+{
+    const person = {
+        name : "hello",
+        age : 22,
+        hobbies : "coding",
+        gender : "male"
+    }
+
+    let count = 0;
+
+    for(let key in person){
+        count++;
+    }
+    console.log(count)
+}
+
+// 48. javascript program to Add key/value pair to an object 
+
+{
+    const person = {
+        name : "hello",
+        age : 22,
+        hobbies : "coding"
+    }
+    person.height = 3.2;
+    console.log(person)
+}
+
+// 49. javscript program to Replace All Occurrences of a string 
+
+// 50. Javascript program to create Multiline strings 
