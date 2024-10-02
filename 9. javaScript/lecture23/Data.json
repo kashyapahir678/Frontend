@@ -1,0 +1,30 @@
+{
+    "product" : [
+        {
+            "id":1,
+            "productName":"iphone",
+            "productColor":"gray"
+        },
+        {
+            "id":2,
+            "productName":"Mi",
+            "productColor":"Black"
+        },
+        {
+            "id":3,
+            "productName":"Realme",
+            "productColor":"Red"
+        },
+        {
+            "id":4,
+            "productName":"Poco",
+            "productColor":"Blue"
+        },
+        {
+            "id":3,
+            "productName":"Google Pixel",
+            "productColor":"White"
+        }
+
+    ]
+}
