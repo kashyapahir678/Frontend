@@ -717,9 +717,9 @@ else {
     let currentDate = new Date();
     let getyear = currentDate.getFullYear();
     let getdate = currentDate.getDate();
-    let getmonth = currentDate.getMonth()+1;
+    let getmonth = currentDate.getMonth() + 1;
     console.log(currentDate)
-    
+
     console.log(`${getdate}-${getmonth}-${getyear}`)
     console.log(`${getdate}/${getmonth}/${getyear}`)
 }
@@ -752,5 +752,95 @@ else {
 // 66. JavaScript Program to Create Countdown Timer
 
 {
-    
+
 }
+
+// 67. JavaScript Program to Remove Specific Item From an Array
+
+{
+    let arr = ["apple", "mango", "kiwi"];
+
+    let remove = arr.pop();
+    console.log(arr)
+}
+
+// 68. JavaScript Program to Check if An Array Contains a Specified Value
+
+{
+    let arr = ["apple", "mango", "kiwi"];
+
+    let value = arr.includes("mango")
+
+    if (value) {
+        console.log("Array contain value")
+    } else {
+        console.log("Array not contain value")
+    }
+}
+
+// 69. JavaScript Program to Insert Item in an Array
+
+{
+    let arr = ["apple", "mango", "kiwi"];
+
+    let add = arr.unshift("Banana");
+    console.log(arr)
+}
+
+
+// 70. JavaScript Program to Append an Object to an Array
+
+{
+    let arr = [1, 2, 3];
+
+    let obj = { x: 10, y: 16 };
+
+    console.log(arr.push(obj), "Array is - ", arr)
+}
+
+// 71. JavaScript Program to Check if An Object is An Array
+
+{
+    let arr = [1, 2, 3];
+
+    const result = Array.isArray(arr);
+    if (result) {
+        console.log("is an array")
+    } else {
+        console.log("is not an array")
+    }
+}
+
+// 72. JavaScript Program to Empty an Array
+
+{
+    let arr = [1, 2, 3, 4, 5];
+    arr = [];
+    console.log(arr);
+
+}
+
+// 73. JavaScript Program to Add Element to Start of an Array
+
+{
+    let arr = [1, 2, 3, 4, 5];
+
+    let add = arr.unshift(10);
+    console.log(arr)
+
+}
+
+// 74. JavaScript Program to Remove Duplicates From Array
+
+{
+    let arr = [1,5,6,9,5];
+    let arr1 = [];
+
+    for(let i of arr){
+        if(arr1.indexOf(i) == -1){
+            arr1.push(i)
+        }
+    }
+
+}
+
