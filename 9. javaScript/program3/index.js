@@ -833,14 +833,108 @@ else {
 // 74. JavaScript Program to Remove Duplicates From Array
 
 {
-    let arr = [1,5,6,9,5];
+    let arr = [1, 5, 6, 9, 5];
     let arr1 = [];
 
-    for(let i of arr){
-        if(arr1.indexOf(i) == -1){
+    for (let i of arr) {
+        if (arr1.indexOf(i) == -1) {
             arr1.push(i)
         }
     }
 
 }
 
+// 75. JavaScript Program to Merge Two Arrays and Remove Duplicate Items
+
+{
+    let arr1 = [1, 2, 3, 4, 5, 6];
+    let arr2 = [3, 4, 5, 7];
+    let arr = [...arr1, ...arr2];
+    let merger = [...new Set(arr)]
+    console.log(merger)
+}
+
+// 76. JavaScript Program to Sort Array of Objects by Property Values
+
+{
+    const students = [{ name: 'Sara', age: 24 }, { name: 'John', age: 22 }, { name: 'Jack', age: 27 }];
+
+    function compare(a, b) {
+        return a.age - b.age
+    }
+    console.log(students.sort(compare))
+}
+
+// 77. JavaScript Program to Create Two Dimensional Array
+
+{
+    let row = 2;
+    let col = 2;
+    let arr = [];
+    let h = 0;
+
+    for (let i = 0; i < row; i++) {
+        arr[i] = [];
+        for (let j = 0; j < col; j++) {
+            arr[i][j] = h++;
+        }
+    }
+    console.log(arr)
+}
+
+// 78. 
+
+// 79. JavaScript Program to Compare Elements of Two Arrays
+
+{
+    const array1 = [1, 3, 5, 8];
+    const array2 = [1, 3, 0, 8];
+
+    let result = JSON.stringify(array1) == JSON.stringify(array2);
+
+    if (result) {
+        console.log("The array have the same array")
+    }
+    else {
+        console.log("The array have the differnet array")
+    }
+}
+
+// 80. JavaScript Program to Get Random Item From an Array
+
+{
+
+    function getRandomItem(arr) {
+
+        const randomIndex = Math.floor(Math.random() * arr.length);
+
+        const item = arr[randomIndex];
+
+        return item;
+    }
+    const array = [1, 'hello', 5, 8];
+    const result = getRandomItem(array);
+    console.log(result);
+}
+
+// 81. JavaScript Program To Perform Intersection Between Two Arrays
+
+{
+
+    function Intersection(arr1,arr2){
+        let filter = arr1.filter(x => arr2.indexOf(x) !== -1)
+        return filter
+    }
+
+    const arr1 = [1, 2, 3, 5, 9];
+    const arr2 = [1, 3, 5, 8];
+
+    const result = Intersection(arr1,arr2)
+    console.log(result)
+}
+
+// 82. JavaScript Program to Split Array into Smaller Chunks
+
+{  
+
+}
