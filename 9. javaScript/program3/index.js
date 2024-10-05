@@ -921,7 +921,7 @@ else {
 
 {
 
-    function Intersection(arr1,arr2){
+    function Intersection(arr1, arr2) {
         let filter = arr1.filter(x => arr2.indexOf(x) !== -1)
         return filter
     }
@@ -929,12 +929,45 @@ else {
     const arr1 = [1, 2, 3, 5, 9];
     const arr2 = [1, 3, 5, 8];
 
-    const result = Intersection(arr1,arr2)
+    const result = Intersection(arr1, arr2)
     console.log(result)
 }
 
 // 82. JavaScript Program to Split Array into Smaller Chunks
 
-{  
+{
 
+    function splitIntoChunk(arr, chunk) {
+
+        for (i = 0; i < arr.length; i += chunk) {
+
+            let tempArray;
+            tempArray = arr.slice(i, i + chunk);
+            console.log(tempArray);
+        }
+
+    }
+
+    const array = [1, 2, 3, 4, 5, 6, 7, 8];
+    const chunk = 2;
+    splitIntoChunk(array, chunk);
 }
+
+// 83. JavaScript Program to Include a JS file in Another JS file
+
+// 84. JavaScript Program to Get File Extension
+
+{
+
+    function getFileExtension(filename){
+        const extension = filename.split('.').pop();
+        return extension;
+    }
+
+    const result1 = getFileExtension('module.js')
+    console.log(result1)
+
+    const result2 = getFileExtension('module.txt');
+    console.log(result2)
+}
+
