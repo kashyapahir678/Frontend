@@ -959,7 +959,7 @@ else {
 
 {
 
-    function getFileExtension(filename){
+    function getFileExtension(filename) {
         const extension = filename.split('.').pop();
         return extension;
     }
@@ -971,3 +971,346 @@ else {
     console.log(result2)
 }
 
+// 85. JavaScript Program To Check If A Variable Is undefined or null
+
+{
+    let number = "hello";
+    let number2 = null;
+
+
+    if (number2 == null) {
+        console.log("variable in undefind or null")
+    }
+    else {
+        console.log("The variable is neither undefined nor null")
+    }
+}
+
+// 86. JavaScript Program to Set a Default Parameter Value For a Function
+
+{
+    function sum(x = 3, y = 5) {
+        return x + y;
+    }
+    console.log(sum(5, 16))
+    console.log(sum(7))
+    console.log(sum())
+}
+
+// 87. JavaScript Program to Illustrate Different Set Operations
+
+{
+
+    function union(a, b) {
+        let unionSet = new Set();
+        for (let i of b) {
+            unionSet.add(i)
+        }
+        return unionSet
+    }
+
+    const setA = new Set(['apple', 'mango', 'orange']);
+    const setB = new Set(['grapes', 'apple', 'banana']);
+
+    const result = union(setA, setB);
+    console.log(result)
+}
+
+// 88. Javascript Program to Generate a Random Number Between Two Numbers
+
+{
+    let min = 50;
+    let max = 100
+
+    let result = Math.trunc(Math.random() * (max - min + 1) + min);
+    console.log(result)
+}
+
+// 89. JavaScript Program To Get The Current URL
+
+{
+    const url1 = window.location.href;
+    const url2 = document.URL;
+    console.log(url1)
+    console.log(url2)
+}
+
+// 90. JavaScript Program to Validate An Email Address
+
+{
+    const email = "helloworld@gmail.com"
+    const regex = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+    if (regex.test(email)) {
+        console.log("The email address is valid")
+    }
+    else {
+        console.log("The email address is not valid")
+    }
+}
+
+// 91. JavaScript Program to Check If a Variable is of Function Type
+
+{
+    const count = true;
+    const x = function () {
+        console.log('hello')
+    };
+
+
+    function testVariable(variable) {
+
+        if (variable instanceof Function) {
+            console.log('The variable is of function type');
+        }
+        else {
+            console.log('The variable is not of function type');
+        }
+    }
+
+    testVariable(count);
+    testVariable(x);
+}
+
+// 92. JavaScript Program To Work With Constants
+
+{
+    const a = 5;
+    console.log(a);
+
+    {
+        const a = 50;
+        console.log(a);
+    }
+    console.log(a);
+
+    const arr = ['work', 'exercise', 'eat'];
+    console.log(arr);
+
+    arr[3] = 'hello';
+    console.log(arr);
+}
+
+// 93.JavaScript Program to Pass Parameter to a setTimeout() Function
+
+{
+    function name() {
+        console.log("hello world")
+    }
+    // setTimeout(name, 2000);
+    console.log("This message first shown")
+}
+
+// 94. JavaScript Program to Generate a Range of Numbers and Characters
+
+{
+
+}
+
+// 95. JavaScript Program to Perform Function Overloading
+
+{
+    function sum() {
+
+        if (arguments.length == 0) {
+            console.log('You have not passed any argument');
+        }
+
+        else if (arguments.length == 1) {
+            console.log('Pass at least two arguments');
+        }
+
+        else {
+            let result = 0;
+            let length = arguments.length;
+
+            for (i = 0; i < length; i++) {
+                result = result + arguments[i];
+            }
+            console.log(result);
+        }
+    }
+
+    sum();
+    sum(5);
+    sum(5, 9);
+    sum(1, 2, 3, 4, 5, 6, 7, 8, 9);
+}
+
+// 96. JavaScript Program to Implement a Stack
+
+{
+
+    class Stack {
+
+        constructor() {
+            this.items = [];
+        }
+
+        add(element) {
+            return this.items.push(element)
+        }
+
+        remove() {
+            if (this.items.length > 0) {
+                return this.items.pop();
+            }
+        }
+
+        peek() {
+            return this.items[this.items.length - 1]
+        }
+
+        isEmpty() {
+            return this.items.length == 0;
+        }
+
+        size() {
+            return this.items.length;
+        }
+
+        clear() {
+            this.items = [];
+        }
+    }
+
+    let stack = new Stack();
+    stack.add(1)
+    stack.add(2)
+    stack.add(5)
+    stack.add(6)
+    console.log(stack.items)
+
+    stack.remove();
+    console.log(stack.items)
+
+    stack.size();
+    console.log(stack.size())
+
+    stack.peek();
+    console.log(stack.peek())
+
+    stack.add(50)
+    console.log(stack.items)
+
+    stack.isEmpty()
+    console.log(stack.isEmpty())
+
+    // stack.clear();
+    // console.log(stack.clear())
+    // console.log(stack.items)
+}
+
+// 97. JavaScript Program to Implement a Queue
+
+{
+
+    class Queue {
+        constructor() {
+            this.item = {};
+            this.head = 0;
+            this.tail = 0;
+        }
+
+        add(element) {
+            this.item[this.tail] = element;
+            this.tailIndex++;
+        }
+
+        delete() {
+            let remove = this.item[this.head];
+            delete this.item[this.head];
+            this.head++;
+            return remove
+        }
+
+        clear() {
+            this.item = {};
+        }
+
+    }
+
+    let queue = new Queue();
+    queue.add(5);
+
+
+    console.log("Queue after adding items: ");
+    console.log(queue.item);
+
+    queue.delete();
+    console.log(queue.item)
+    queue.add(50);
+    console.log(queue.item);
+
+    queue.clear();
+    console.log(queue.item)
+
+}
+
+// 98. JavaScript Program to Check if a Number is Float or Integer
+
+{
+    let number = 20.22;
+
+    if (Number.isInteger(number)) {
+        console.log("Number is integer")
+    }
+    else {
+        console.log("Number is float")
+    }
+
+}
+
+// 99. JavaScript Program to Pass a Function as Parameter
+
+{
+    function name1(a) {
+        return a;
+    }
+
+    console.log(name1("JavaScript is Awesome!!"))
+}
+
+// 100. JavaScript Program to Get the Dimensions of an Image
+
+{
+    // const img = new Image();
+
+    // img.src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTc9APxkj0xClmrU3PpMZglHQkx446nQPG6lA&s";
+
+    // img.onload = function(){
+    //     console.log("width " + this.width)
+    //     console.log("height " + this.height)
+    // }
+}
+
+// 101. JavaScript Program to Remove All Whitespaces From a Text
+
+{
+    let text = "This                    is                 Javscript   !!!"
+    console.log(text)
+
+    let reuslt = text.split(' ').join('');
+    console.log(reuslt)
+}
+
+// 102. JavaScript Program to Write to Console
+
+{
+    console.log(8);
+
+    console.log('hello');
+
+    const x = 'hello';
+    console.log(x);
+}
+
+// 103. JavaScript Program to Convert Date to Number
+
+{
+    const d1 = new Date();
+    console.log(d1)
+
+    const result = d1.gettime();
+    console.log(result)
+}
