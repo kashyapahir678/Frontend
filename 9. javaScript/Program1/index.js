@@ -64,3 +64,8 @@ console.log(`the sum is ${sum}`)
 
 //   6.Combination of Arithmetic Operators
 
+{
+  let operation = a += 5; 
+  console.log(operation)
+}
+

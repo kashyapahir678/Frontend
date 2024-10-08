@@ -882,7 +882,18 @@ else {
     console.log(arr)
 }
 
-// 78. 
+// 78. JavaScript Program to Extract Given Property Values from Objects as Array
+{
+function extractValue(arr, prop) {
+    let extractedValue = arr.map(item => item[prop]);
+    return extractedValue;
+}
+
+const objArray = [{a: 1, b: 2}, {a: 4, b: 5}, {a: 8, b: 9}];
+
+const result = extractValue(objArray, 'a');
+console.log(result);
+}
 
 // 79. JavaScript Program to Compare Elements of Two Arrays
 
@@ -1104,7 +1115,25 @@ else {
 // 94. JavaScript Program to Generate a Range of Numbers and Characters
 
 {
-
+    function* iterate(a, b) {
+        for (let i = a; i <= b; i += 1) {
+          yield i
+        }
+      }
+      
+      function range(a, b) {
+          if(typeof a === 'string') {
+              let result = [...iterate(a.charCodeAt(), b.charCodeAt())].map(n => String.fromCharCode(n));
+              console.log(result);
+          }
+          else {
+              let result = [...iterate(a, b)];
+              console.log(result);
+          }
+      }
+      
+      range(1, 5);
+      range('A', 'G');
 }
 
 // 95. JavaScript Program to Perform Function Overloading
