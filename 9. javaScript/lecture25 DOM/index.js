@@ -17,34 +17,34 @@
 // }
 
 
-// {
-//    let DOM1 =  document.getElementById('firstHeading').innerHTML
+{
+   let DOM1 =  document.getElementById('firstHeading').innerHTML
 
-//    let DOM2 = document.getElementById('firstHeading').innerText
+   let DOM2 = document.getElementById('firstHeading').innerText
 
-//    let DOM3 = document.getElementById('firstHeading').textContent
+   let DOM3 = document.getElementById('firstHeading').textContent
 
-//     console.log(DOM1);
+    console.log(DOM1);
 
-//     console.log(DOM2);
+    console.log(DOM2);
 
-//     console.log(DOM3);   
-// }
+    console.log(DOM3);   
+}
 
-// {
-//     function elementStyle1(){
-//         let dom = document.getElementById('firstHeading')
-//         dom.classList.add('heading')
-//     }
-//     function elementStyle2(){
-//         let dom = document.getElementById('firstHeading')
-//         dom.classList.remove('heading')
-//     }
-//     function elementStyle3(){
-//         let dom = document.getElementById('firstHeading')
-//         dom.classList.toggle('heading')
-//     }
-// }
+{
+    function elementStyle1(){
+        let dom = document.getElementById('firstHeading')
+        dom.classList.add('heading')
+    }
+    function elementStyle2(){
+        let dom = document.getElementById('firstHeading')
+        dom.classList.remove('heading')
+    }
+    function elementStyle3(){
+        let dom = document.getElementById('firstHeading')
+        dom.classList.toggle('heading')
+    }
+}
 
 // {
 //     let dom = document.getElementById('firstHeading').addEventListener('dblclick' , () => {
