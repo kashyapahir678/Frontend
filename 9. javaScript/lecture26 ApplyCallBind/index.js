@@ -86,28 +86,28 @@
 
 /* Javascript Bind() method */
 
-// {
+{
 
-//   const profile = {
-//     firstName: "John",
-//     lastName: "Smith",
-//     names: function () {
-//       console.log(`${this.firstName} ${this.lastName}`);
-//     },
-//   };
+  const profile = {
+    firstName: "John",
+    lastName: "Smith",
+    names: function () {
+      console.log(`${this.firstName} ${this.lastName}`);
+    },
+  };
 
-//   profile.names()
+  profile.names()
 
-//   const secondProfile = {
-//     firstName:'Ravi',
-//     lastName:'Teja'
-//   }
+  const secondProfile = {
+    firstName:'Ravi',
+    lastName:'Teja'
+  }
 
-//   let demo = profile.names.bind(secondProfile , [])
+  let demo = profile.names.bind(secondProfile , [])
 
-//   console.log(demo());
+  console.log(demo());
 
-// }
+}
 
 /* Javascript Module ES6 */
 
@@ -115,6 +115,6 @@
 //     return console.log(10+20);
 // }
 
-// names = 'SkillQode'
+// names = 'hello world!'
 
 // console.log(names);
