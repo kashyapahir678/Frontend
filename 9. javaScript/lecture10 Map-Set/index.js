@@ -17,7 +17,7 @@ console.log(set1)
 // The delete() method of Set instances removes a specified value from this set, if it is in the set.
 set1.delete(20)
 
-console.log(set1, "delete")
+console.log(set1, "delete")  
 
 // The has() method of Set instances returns a boolean
 
