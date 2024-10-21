@@ -3,19 +3,19 @@ n
 
 $(function () {
     $('#btn1').click(function () {
-        $('#h1').addClass('heading');
+        $('#h1').addClass('heading2');
     })
 })
 
 $(function () {
     $('#btn2').click(function () {
-        $('#h1').removeClass('heading');
+        $('#h1').removeClass('heading2');
     })
 })
 
 $(function () {
     $('#btn3').click(function () {
-        $('#h1').toggleClass('heading');
+        $('#h1').toggleClass('heading2');
     })
 })
 
