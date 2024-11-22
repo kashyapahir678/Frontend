@@ -205,17 +205,17 @@ else {
 
 }
 
-// 18. JavaScript Program to Check Armstrong Number
+// 18. JavaScript Program to Check Armstrong Number 
 
 {
 
 }
 
-// 20. JavaScript Program to Make a Simple Calculator
+// 20. JavaScript Program to Make a Simple Calculator 
 
 {
 
-    // const operator = prompt('Enter operator ( either +, -, * or / ): ');
+    // const operator = prompt('Enter operator ( either +, -, * or / ): '); 
 
 
     // let number1 = 5;
@@ -239,7 +239,7 @@ else {
     // console.log(`${number1} ${operator} ${number2} = ${result}`);
 }
 
-// 21. JavaScript Program to Find the Sum of Natural Numbers
+// 21. JavaScript Program to Find the Sum of Natural Numbers 
 {
     let num = 5;
     let sum = 0;
@@ -250,7 +250,7 @@ else {
     console.log(sum)
 
 }
-// 22. JavaScript Program to Check if the Numbers Have Same Last Digit
+// 22. JavaScript Program to Check if the Numbers Have Same Last Digit 
 
 {
     const a = 30;
@@ -269,17 +269,17 @@ else {
     }
 }
 
-// 23. JavaScript Program to Find HCF or GCD
+// 23. JavaScript Program to Find HCF or GCD 
 
-// 24. JavaScript Program to Find LCM
+// 24. JavaScript Program to Find LCM 
 
-// 25. JavaScript Program to Find the Factors of a Number
+// 25. JavaScript Program to Find the Factors of a Number 
 
 {
 
 }
 
-// 26 .JavaScript Program to Find Sum of Natural Numbers Using Recursion
+// 26 .JavaScript Program to Find Sum of Natural Numbers Using Recursion  
 
 {
     function sum(n) {
@@ -295,16 +295,16 @@ else {
     console.log(sum(n))
 }
 
-// 27 . Javascript program to guess random number 
+// 27 . Javascript program to guess random number  
 
 {
     let random = Math.trunc(Math.random() * 10);
     console.log(random)
 }
 
-// 28. Javascript program to suffle deck of cards 
+// 28. Javascript program to suffle deck of cards  
 
-// 29. JavaScript Program to Display Fibonacci Sequence Using Recursion
+// 29. JavaScript Program to Display Fibonacci Sequence Using Recursion    
 
 {
     let n = 5;
@@ -328,9 +328,9 @@ else {
     }
 }
 
-// 30. JavaScript Program to Find Factorial of Number Using Recursion
+// 30. JavaScript Program to Find Factorial of Number Using Recursion    
 
-// 31. JavaScript Program to Convert Decimal to Binary
+// 31. JavaScript Program to Convert Decimal to Binary                                               
 
 {
     let number = 50;
@@ -338,7 +338,7 @@ else {
     console.log(number.toString(2))
 }
 
-// 32. JavaScript Program to Find ASCII Value of Character
+// 32. JavaScript Program to Find ASCII Value of Character              
 
 {
     let string = "A";
@@ -348,7 +348,7 @@ else {
     console.log(result)
 }
 
-// 33. Javascript program check whether a string palidrone or Not 
+// 33. Javascript program check whether a string palidrone or Not    
 
 {
 

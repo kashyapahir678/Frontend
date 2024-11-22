@@ -121,11 +121,11 @@ eq()
 */
 
 {
-    // $(function(){
-    //     $('#btn').click(function(){
-    //         $('h1').first().css('background-color' , 'green')
-    //     })
-    // })
+    $(function(){
+        $('#btn').click(function(){
+            $('h1').first().css('background-color' , 'green')
+        })
+    })
 
     // $(function(){
     //     $('#btn').click(function(){
