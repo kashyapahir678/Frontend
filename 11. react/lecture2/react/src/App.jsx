@@ -8,6 +8,7 @@ function App() {
   return (
     <>
       <div className='App'>
+        Welcome to my app
           <Button/>
           <Card/>
       </div>

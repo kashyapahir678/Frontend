@@ -9,14 +9,14 @@
 // Math.min()
 // Math.pow()
 // Math.random()
-// Math.round()
+// Math.round()                                                                                     
 // Math.sin()
 // Math.sqrt()
 // Math.trunc()
 // Math.sign()
 // Math.cos()
 // Math.log()
-// Math.log10()
+// Math.log10()                                                          
 
 // Math.log2()
 
@@ -55,7 +55,7 @@
 {
     let math = Math.floor(21.40);
     let math1 = Math.floor(48.80)
-    console.log(math)
+    console.log(math)                    
     console.log(math1);
 }
 

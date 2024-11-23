@@ -156,7 +156,7 @@
 // String toString and valueOf method 
 
 {
-    // let str = 56235;
-    // console.log(str.toString())
-    // console.log(str.valueOf())
+    let str = 56235;
+    console.log(str.toString())
+    console.log(str.valueOf())
 }

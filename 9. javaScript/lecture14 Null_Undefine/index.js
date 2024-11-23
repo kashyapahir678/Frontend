@@ -1,17 +1,17 @@
 // /* Javascript NaN , null  , undefined  */
 
-// // {
-// //     var x;
-// //     console.log(x);
-// // }
-// // {
-// //     let y;
-// //     console.log(y);
-// // }
-// // {
-// //     const z;
-// //     console.log(z);
-// // }
+// {
+//     var x;
+//     console.log(x);
+// }
+// {
+//     let y;
+//     console.log(y);
+// }
+// {
+//     const z;
+//     console.log(z);
+// }
 // {
 //   console.log(undefined == undefined);
 //   console.log(undefined == null);
