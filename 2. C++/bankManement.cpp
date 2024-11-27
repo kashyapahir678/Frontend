@@ -22,7 +22,7 @@ void Account ::deposit_Money()
     int d;
     cout << endl
          << "Enter Amount you want to Deposit : ";
-    cin >> d;
+    cin >> d;   
     balance += d;
     cout << endl
          << "Available Balance : " << balance << endl;

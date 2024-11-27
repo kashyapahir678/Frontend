@@ -22,7 +22,7 @@
 
    let DOM2 = document.getElementById('firstHeading').innerText
 
-   let DOM3 = document.getElementById('firstHeading').textContent
+   let DOM3 = document.getElementById('firstHeading').
 
     console.log(DOM1);
 
