@@ -10,8 +10,8 @@ const Props = ({name,value}) => {
        <h3>{name}</h3>
        <h3>{value}</h3>
 
-       <p>{element1}</p>
-       <p>{element2}</p>
+       {/* <p>{element1}</p>
+       <p>{element2}</p> */}
     </div>
   )
 }

@@ -1,7 +1,7 @@
 
 import './App.css'
-import JsxWithCurly from './conponents/JsxWithCurly'
-import Props from './conponents/Props'
+import JsxWithCurly from './components/JsxWithCurly'
+import Props from './components/Props'
 
 function App() {
 
