@@ -11,6 +11,7 @@ function App() {
       {/* <JsxWithCurly/> */}
       {/* <Props name="This is props method's" value={22}/> */}
       <PackingList/>
+      <img src="" alt="" />
     </>
   )
 }
