@@ -8,4 +8,4 @@ const Events = () => {
   )
 }
 
-export default Events
+export default Events 
