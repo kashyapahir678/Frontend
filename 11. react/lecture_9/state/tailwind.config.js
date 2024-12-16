@@ -5,7 +5,21 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      keyframes: {
+        slideIn: {
+          0: {
+            transform: "translateY(0px)"
+          },
+          100: {
+            transform: "translateY(200px)"
+          }
+        }
+      },
+      animation: {
+        slideIn: "slidein 2s ease-in-out"
+      }
+    },
   },
   plugins: [],
 }
