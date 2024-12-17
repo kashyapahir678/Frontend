@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+
+    .h1{
+        @apply text-black font-serif text-xl;
+    }
+
+    .btn{
+      @apply bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded;
+    }
+
+    .btn_color{
+        @apply bg-gray-500 hover:bg-black text-black hover:text-white border-white font-serif py-2 px-4 rounded;
+      }
+
+    .input{
+        @apply bg-gray-400 text-black font-bold py-4 px-8 rounded border-black ;
+      }
+  }

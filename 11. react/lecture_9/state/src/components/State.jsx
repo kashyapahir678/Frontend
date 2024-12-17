@@ -5,9 +5,11 @@ const State = () => {
 
     const [index, setIndex] = useState(0);
     const [input, setInput] = useState(index)
+    const [direction, setDirection] = useState("");
     const [show, setShow] = useState(false)
 
     const handleNext = () => {
+        setDirection("right");
         if (index == 9) {
             setIndex(0)
         }
@@ -17,6 +19,7 @@ const State = () => {
     }
 
     const handlePrev = () => {
+        setDirection("left");
         if (index > 0) {
             setIndex(index - 1)
         }
@@ -50,7 +53,9 @@ const State = () => {
 
                 {listCard.map((item) => {
                     return (
-                        <div key={item.id} id='cardImg' className={`${!show ? 'animate-slideIn': ""} max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700`}>
+                        <div key={item.id} id='cardImg'
+                            className={`${direction === "right" ? "slide-in-right" : "slide-in-left"}
+                            max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700`}>
                             <a href="#">
                                 <img className="rounded-t-lg h-52 w-full object-cover" src={item.image} alt="" />
                             </a>
@@ -89,7 +94,7 @@ const State = () => {
                     <button className='bg-black cursor-pointer text-white py-2 px-4' onClick={handlesubmit}>Click</button>
                 </div>
 
-                <button className='py-2 px-4 text-white outline-dotted bg-black cursor-pointer font-bold rounded-md'  onClick={handleNext}>Next</button>
+                <button className='py-2 px-4 text-white outline-dotted bg-black cursor-pointer font-bold rounded-md' onClick={handleNext}>Next</button>
             </div>
         </div>
     )
