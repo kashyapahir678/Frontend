@@ -1,12 +1,14 @@
 
 import './App.css'
-import Counter from './components/Counter'
+// import Counter from './components/Counter'
+import Pagination from './components/Pagination'
 
 function App() {
 
   return (
     <>
-        <Counter/>
+        {/* <Counter/> */}
+        <Pagination/>
     </>
   )
 }

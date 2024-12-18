@@ -6,9 +6,6 @@ const Counter = () => {
     const [run, setRun] = useState(false)
     const [backgroundColor, setBackgroundColor] = useState("gray");
 
-    const miniute = new Date(time);
-    
-
 
     useEffect(() => {
         if (run && time > 0) {
@@ -38,6 +35,14 @@ const Counter = () => {
         setBackgroundColor("white");
     }
 
+    const getAllTImer = () => {
+        const hours = Math.floor(time / 3600);
+        const minutes = Math.floor((time % 3600) / 60);
+        const seconds = time % 60;
+
+        return `${hours}h ${minutes}m ${seconds}s`;
+    }
+
 
     return (
         <div style={{ backgroundColor: backgroundColor, height: "100vh", width: "100%", display: "flex", alignItems: "center", justifyContent: "center", flexDirection: "column", margin: "auto", transition: "background-color 0.5s ease" }}>
@@ -48,8 +53,8 @@ const Counter = () => {
                 <button className='btn' onClick={handlestop}>Stop</button>
                 <button className='btn' onClick={handlereset}>Reset</button>
             </div>
-            <h2 className='btn text-center bg-purple-500'>{time > 0 ? `${time} second remaining` : 'time up'}</h2>
-            
+            <h2 className='btn text-center bg-purple-500'>{time > 0 ? `${getAllTImer()} second remaining` : 'time up'}</h2>
+
         </div>
     )
 }

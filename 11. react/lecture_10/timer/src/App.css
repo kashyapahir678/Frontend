@@ -30,3 +30,39 @@
     align-items: center;
     justify-content: space-between;
   }
+
+  .container{
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+  }
+
+  .pagination{
+
+  }
+
+  .blog{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 25px;
+    /* height: 350px;
+    width: 350px; */
+    /* overflow: hidden; */
+  }
+
+  .blog img{
+     height: 200px;
+     width: 100%;
+     object-fit: cover;
+  }
+
+  .blog p{
+    padding-top: 15px;
+    padding-bottom: 10px;
+    color: white;
+  }
+
+  .blog span{
+    margin-top: 5px;
+    margin-left: 10px;
+  }
