@@ -6,26 +6,40 @@ const Pagination = () => {
 
     const [data, setData] = useState([])
 
+    const [filteredData, setFilteredData] = useState([]);
+    const [inputData, setInputData] = useState("")
     const [currentPage, setCurrentPage] = useState(1)
 
-    const item = 5;
+    const pageIndex = 6;
+
+
+
+    // Pagination 
+
+    let lastIndex = currentPage * pageIndex;
+
+    let firstIndex = lastIndex - pageIndex;
+
+    let productList = data.slice(firstIndex,lastIndex);
+
+    console.log(productList)
+
 
     useEffect(() => {
         axios.get("https://fakestoreapi.com/products")
             .then((res) => {
                 setData(res.data)
+                setFilteredData(res.data)
             })
     }, [])
 
-    const handlePage = (num) => {
-        console.log(num)
-        setCurrentPage(num)
-        if(num == 1){
-            setData(data.slice(0,6))
-        }
-        else if(num == 2){
-            setData(data.slice(6,11))
-        }
+    const handleinput = (e) => {
+        const value = e.target.value.toLowerCase()
+        setInputData(value);
+
+        const filterData = data.filter((item) => item.title.toLowerCase().includes(value));
+        setFilteredData(filterData)
+        console.log(filterData,"filter")
     }
 
 
@@ -33,9 +47,12 @@ const Pagination = () => {
         <div className='container'>
 
             <div className='pagaination'>
+                <div>
+                    <input type="text" className='input' onChange={handleinput} value={inputData} placeholder='serach product...' />
+                </div>
                 <div className='blog'>
                     {
-                        data.slice(0, 6).map((item, index) => {
+                        productList.map((item, index) => {
                             return (
 
 
@@ -53,26 +70,26 @@ const Pagination = () => {
 
                             )
                         })
-                    }
+                    }    
                 </div>
             </div>
 
             <nav aria-label="Page navigation example ">
                 <ul className="flex items-center justify-center -space-x-px text-sm mt-2 ">
                     <li>
-                        <a href="#" className="flex items-center justify-center px-3 h-8 ms-0 leading-tight text-gray-500 bg-white border border-e-0 border-gray-300 rounded-s-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Previous</a>
+                        <a href="#" className="flex items-center justify-center px-3 h-8 ms-0 leading-tight text-gray-500 bg-white border border-e-0 border-gray-300 rounded-s-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white" onClick={() => setCurrentPage((prev) => prev - 1)} >Previous</a>
                     </li>
                     <li>
-                        <a href="#" className="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white" onClick={() => handlePage(1)}>1</a>
+                        <a href="#" className="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">{currentPage}</a>
                     </li>
-                    <li>
+                    {/* <li>
                         <a href="#" className="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white" onClick={() => handlePage(2)}>2</a>
                     </li>
                     <li>
                         <a href="#" className="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white" onClick={() => handlePage(3)}>3</a>
-                    </li>
+                    </li> */}
                     <li>
-                        <a href="#" className="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 rounded-e-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white" >Next</a>
+                        <a href="#" className="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 rounded-e-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"  onClick={() => setCurrentPage((next) => next + 1)} >Next</a>
                     </li>
                 </ul>
             </nav>
