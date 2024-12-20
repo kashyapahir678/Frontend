@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import { HiArrowLongRight } from "react-icons/hi2";
+import { IoSearchOutline } from "react-icons/io5";
 
 const Pagination = () => {
 
@@ -12,7 +13,8 @@ const Pagination = () => {
 
     const pageIndex = 6;
 
-
+    // Number of Pages
+    let NumberOfPages = Math.ceil(data.length / pageIndex);
 
     // Pagination 
 
@@ -20,9 +22,7 @@ const Pagination = () => {
 
     let firstIndex = lastIndex - pageIndex;
 
-    let productList = data.slice(firstIndex,lastIndex);
-
-    console.log(productList)
+    let productList = data.slice(firstIndex, lastIndex);
 
 
     useEffect(() => {
@@ -32,6 +32,7 @@ const Pagination = () => {
                 setFilteredData(res.data)
             })
     }, [])
+    
 
     const handleinput = (e) => {
         const value = e.target.value.toLowerCase()
@@ -39,7 +40,6 @@ const Pagination = () => {
 
         const filterData = data.filter((item) => item.title.toLowerCase().includes(value));
         setFilteredData(filterData)
-        console.log(filterData,"filter")
     }
 
 
@@ -49,10 +49,11 @@ const Pagination = () => {
             <div className='pagaination'>
                 <div>
                     <input type="text" className='input' onChange={handleinput} value={inputData} placeholder='serach product...' />
+                    <span><IoSearchOutline /></span>
                 </div>
                 <div className='blog'>
                     {
-                        productList.map((item, index) => {
+                         productList.map((item, index) => {
                             return (
 
 
@@ -70,7 +71,7 @@ const Pagination = () => {
 
                             )
                         })
-                    }    
+                    }
                 </div>
             </div>
 
@@ -79,17 +80,18 @@ const Pagination = () => {
                     <li>
                         <a href="#" className="flex items-center justify-center px-3 h-8 ms-0 leading-tight text-gray-500 bg-white border border-e-0 border-gray-300 rounded-s-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white" onClick={() => setCurrentPage((prev) => prev - 1)} >Previous</a>
                     </li>
+
+                    {
+                        Array.from({ length: NumberOfPages }, (_, index) => index + 1).map((page) => {
+                            return (
+                                <li>
+                                    <a href="#" className="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white" onClick={() => setCurrentPage(page)}>{page}</a>
+                                </li>
+                            )
+                        })
+                    }
                     <li>
-                        <a href="#" className="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">{currentPage}</a>
-                    </li>
-                    {/* <li>
-                        <a href="#" className="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white" onClick={() => handlePage(2)}>2</a>
-                    </li>
-                    <li>
-                        <a href="#" className="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white" onClick={() => handlePage(3)}>3</a>
-                    </li> */}
-                    <li>
-                        <a href="#" className="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 rounded-e-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"  onClick={() => setCurrentPage((next) => next + 1)} >Next</a>
+                        <a href="#" className="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 rounded-e-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white" onClick={() => setCurrentPage((next) => next + 1)} >Next</a>
                     </li>
                 </ul>
             </nav>
