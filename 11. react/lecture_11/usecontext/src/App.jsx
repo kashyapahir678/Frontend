@@ -2,13 +2,16 @@
 import './App.css'
 import Login from './component/Login'
 import Profile from './component/Profile'
+import UserContextProvider from './usecontext/UserContextProvider'
 
 function App() {
 
   return (
     <>
-     <Login/>
-     <Profile/>
+      <UserContextProvider>
+        <Login />
+        <Profile />
+      </UserContextProvider>
     </>
   )
 }
