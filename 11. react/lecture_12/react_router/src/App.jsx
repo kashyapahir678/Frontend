@@ -6,44 +6,52 @@ import Contact from './pages/Contact'
 import Blog from './pages/Blog'
 import Faq from './pages/Faq'
 import Error from './pages/Error'
-// import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Navbar from './components/Navbar'
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { createBrowserRouter, createRoutesFromElements, RouterProvider } from 'react-router-dom'
 
-const Route = createBrowserRouter([
-  {
-    path: '/',
-    element: <Navbar/>,
-    children: [
-      {
-        path: '/',
-        element: <Home/> 
+// const Route = createBrowserRouter([
+//   {
+//     path: '/',
+//     element: <Navbar/>,
+//     children: [
+//       {
+//         path: '/',
+//         element: <Home/>    
+//       },
+//       {
+//         path: '/about',
+//         element: <About/>
+//       },
+//       {
+//         path: '/contact',
+//         element: <Contact/>
+//       },
+//       {
+//         path: '/blog', 
+//         element: <Blog/>
+//       },
+//       {
+//         path: '/faq',
+//         element: <Faq/>
+//       },
+//       {
+//         path: '*',
+//         element: <Error/>
+//       },
+//     ]
+//   },
+// ])
 
-        
-      },
-      {
-        path: '/about',
-        element: <About/>
-      },
-      {
-        path: '/contact',
-        element: <Contact/>
-      },
-      {
-        path: '/blog', 
-        element: <Blog/>
-      },
-      {
-        path: '/faq',
-        element: <Faq/>
-      },
-      {
-        path: '*',
-        element: <Error/>
-      },
-    ]
-  },
-])
+const Router = createBrowserRouter(
+  createRoutesFromElements(
+    <Route path='/' element={<Navbar/>}>
+      <Route index element={<Home/>}/>
+      <Route path='/about' element={<About/>}/>
+      <Route path='/contact' element={<Contact/>}/>
+    </Route>
+  )
+)
 
 function App() {
 
@@ -60,7 +68,7 @@ function App() {
         </Routes>
     </BrowserRouter>       */}
 
-    <RouterProvider router={Route}/>
+    <RouterProvider Router={Router}/>
     </>
   )
 }

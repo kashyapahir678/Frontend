@@ -1,0 +1,40 @@
+a{
+    text-decoration: none;
+    color: black;
+    padding: 8px 12px;
+}
+
+.usercard{
+    width: 100%;
+    border: 1px solid black;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    
+}
+
+.usercard div{
+    border: 1px solid black;
+    cursor: pointer;
+    background-color: #9aa0a1;
+    border-radius: 8px;
+}
+
+.usercard div img{
+    height: 300px;
+    width: 300px;
+}
+
+.usercard div h2{
+    padding: 10px 15px;
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.usercard div p{
+    padding: 10px 15px;
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
