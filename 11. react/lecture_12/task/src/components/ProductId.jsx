@@ -1,27 +1,73 @@
-import React from 'react'
-import { useLoaderData, useParams } from 'react-router-dom'
+import { useLoaderData , useParams } from 'react-router-dom'
 
 const ProductId = () => {
 
-    // const {id} = useParams();
+  const { id } = useParams();
 
-    // const data = useLoaderData();
-    // console.log(data,"data loader")
-    
+  console.log(id);
 
-    // console.log(id, "product")
-
+  const data = useLoaderData()
+  
   return (
-    <div>ProductId - {id}</div>
+      <div className='singleProduct'>
+        <h1>Hello product</h1>
+        <div>
+          {/* <img src={products.image} alt='' style={{ maxWidth: "100%" }} /> */}
+        </div>
+        <div>
+          <h1>{data.title}</h1>
+          <p>{data.description}</p>
+          <p>Price: ${data.price}</p>
+          <button>Add to cart</button>
+        </div>
+      </div>
   )
 }
 
 
-// export const CareerLoader = async ({params}) => {
-//     const {id} = params
-//     console.log(id)
-//     const res = await fetch(`https://fakestoreapi.com/products/`+id);
-//     return res.json();
-// };
+export const ProductLoader = async({params}) => {
+
+   const {id} = params;
+
+   const response = await fetch(`https://fakestoreapi.com/products/${id}`);
+
+   if(!response.ok){
+     throw new Response("Product not found",{status: 404})
+   }
+   
+   return response.json();
+}
+
+
 
 export default ProductId
+
+
+
+// const [product, setProduct] = useState(null);
+// const [loading, setLoading] = useState(true);
+// const [error, setError] = useState(null);
+
+// useEffect(() => {
+//   const fetchProduct = async () => {
+//     try {
+//       const res = await axios.get(`https://fakestoreapi.com/products/${id}`)
+//       if(!res.ok){
+//         throw new Response("Product not found", { status: 404 });
+//       }
+//       else{
+//         setProduct(res.data)
+//         console.log(res)
+//         setLoading(false)
+//       }
+//     }
+//     catch (err) {
+//       setError("Failed to fetch product details.");
+//       setLoading(false);
+//     }
+//   }
+//   fetchProduct();
+// }, [])
+
+// if (loading) return <p>Loading...</p>;
+// if (error) return <p>{error}</p>;

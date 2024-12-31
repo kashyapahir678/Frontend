@@ -38,3 +38,21 @@ a{
     color: white;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
+
+.singleProduct{
+    border: 1px solid black;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+
+}
+
+.singleProduct div{
+    flex-grow: 1;
+    width: 50%;
+}
+
+.singleProduct img{
+    height: 300px;
+    width: 300px;
+}
