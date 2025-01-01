@@ -9,6 +9,7 @@ import ProductId, { ProductLoader } from './components/ProductId';
 import Error from './components/Error';
 import Product from './components/Product/Product';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import ErrMessage from './components/ErrMessage';
 
 
 // const router = createBrowserRouter([
@@ -44,11 +45,10 @@ const router = createBrowserRouter(
       <Route index element={<Home />} />
       <Route path='/about' element={<About />} />
       <Route path='/product' element={<Product />}>
-        <Route index element={<Contact />} />
-        <Route path=':id' element={<ProductId /> } loader={ProductLoader}/>
+        <Route index element={<Contact />} errorElement={<ErrMessage/>}/>
+        <Route path=':id' element={<ProductId /> } loader={ProductLoader} errorElement={<ErrMessage/>}/>
       </Route>
       <Route path='*' element={<Error />} />
-
     </Route>
   )
 )

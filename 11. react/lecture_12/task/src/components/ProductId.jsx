@@ -1,18 +1,16 @@
 import { useLoaderData , useParams } from 'react-router-dom'
+import { useLocation } from 'react-router-dom';
 
 const ProductId = () => {
 
   const { id } = useParams();
 
-  console.log(id);
-
   const data = useLoaderData()
   
   return (
       <div className='singleProduct'>
-        <h1>Hello product</h1>
         <div>
-          {/* <img src={products.image} alt='' style={{ maxWidth: "100%" }} /> */}
+          <img src={data.image} alt='' style={{ maxWidth: "100%" }} />
         </div>
         <div>
           <h1>{data.title}</h1>
@@ -32,7 +30,7 @@ export const ProductLoader = async({params}) => {
    const response = await fetch(`https://fakestoreapi.com/products/${id}`);
 
    if(!response.ok){
-     throw new Response("Product not found",{status: 404})
+     throw Error("Product not found")
    }
    
    return response.json();
