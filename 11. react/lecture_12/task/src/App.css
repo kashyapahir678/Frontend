@@ -63,7 +63,7 @@ li{
     width: 300px;
 }
 
-.bredcrumb_container{
+/* .bredcrumb_container{
     background-color: #dee0e0;
     height: 90vh;
 }
@@ -78,10 +78,18 @@ li{
     display: flex;
     align-items: center;
     justify-content: flex-start;
-}
-
+} */
+/* 
 .bredcrumb ul li a{
     color: black;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: 600;
+} */
+
+.breadcrumb{
+    display: flex;
+    background-color: #9aa0a1;
+    color: black;
+    font-weight: 600;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
