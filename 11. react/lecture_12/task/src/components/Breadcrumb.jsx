@@ -29,7 +29,11 @@ const Breadcrumb = () => {
     return(
       <>
        <div>
-          <Link to={pageLink}>{item} {item.length <=1 ? "" : "/"} </Link>
+          
+          <ul className='breadcrumb_ul'>
+            <li><Link to={pageLink}>{item}  </Link></li>
+          </ul>
+          {item.length <=1 ? "" : "/"}
        </div>
       </>
     )

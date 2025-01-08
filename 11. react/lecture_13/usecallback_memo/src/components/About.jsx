@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useId, useState } from 'react'
 import { useCallback } from 'react'
 
 const About = () => {
@@ -25,7 +25,7 @@ const intialData = [
     }
 ]
 
-const List = React.memo(({ users, onRemove }) => {
+const List = (({ users, onRemove }) => {
     console.log("List component render!!")
 
     return (
@@ -43,7 +43,7 @@ const List = React.memo(({ users, onRemove }) => {
 }
 )
 
-// const MemoList = React.memo(List)
+const MemoList = React.memo(List)
 
 const ListData = () => {
 
@@ -52,6 +52,7 @@ const ListData = () => {
 
     const handleRemove = useCallback(
         (userId) => {
+            console.log(useId)
             const filterUser = user.filter((user) => user.id !== userId)
             setUser(filterUser)
         }, [user])
@@ -59,8 +60,8 @@ const ListData = () => {
     return (
         <div>
             <input type="text" placeholder='enter the text' value={input} onChange={(e) => setInput(e.target.value)} />
-            {/* <MemoList users={user} onRemove={handleRemove} /> */}
-            <List users={user} onRemove={handleRemove} />
+            <MemoList users={user} onRemove={handleRemove} />
+            {/* <List users={user} onRemove={handleRemove} /> */}
         </div>
     )
 }

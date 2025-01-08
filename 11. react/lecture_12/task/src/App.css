@@ -93,3 +93,13 @@ li{
     font-weight: 600;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
+
+.breadcrumb_ul li a:hover{
+    color: red;
+    text-decoration: underline;
+}
+
+.breadcrumb_ul li+li::before{
+    padding: 4px;
+    content: "/";
+}
