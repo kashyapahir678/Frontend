@@ -1,12 +1,13 @@
 
 import './App.css'
+import UseReducer from './useReducer/UseReducer'
 
 function App() {
 
 
   return (
     <>
-      <h2>E-library App</h2>
+      <UseReducer/>
     </>
   )
 }

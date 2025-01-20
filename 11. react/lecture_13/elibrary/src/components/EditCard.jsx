@@ -9,7 +9,7 @@ const EditCard = ({books,editedBook}) => {
 
     
     const bookToEdit = books.find((book) => book.id === parseInt(id))
-    // console.log(bookToEdit)
+    console.log(bookToEdit,"edit")
     
     const [image, setImage] = useState(null);
     const [title, setTitle] = useState(books.title);

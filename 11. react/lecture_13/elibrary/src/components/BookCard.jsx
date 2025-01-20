@@ -29,13 +29,13 @@ const BookCard = ({ seachFilterData, books, setBooks }) => {
                 <h5 className="mb-2 text-xl font-bold tracking-tight text-gray-600 dark:text-white"> Title : {item.title}</h5>
                 <p className="mb-3 font-normal text-gray-700 dark:text-green-400">Price : {item.price}</p>
                 <div className='flex items-center justify-center gap-1'>
-                  <Link to={`${item.id}`} className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-black bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                  <Link to={`${item.id}`} className="inline-flex items-center p-[0.5rem] py-2 text-sm font-medium text-center text-black bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
                     View in Detail
                   </Link>
-                  <Link to={`/edit/${item.id}`} className="inline-flex items-center px-3 py-2 float-right text-sm font-medium text-center text-black bg-white rounded-lg hover:bg-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-orange-600 dark:hover:bg--700 dark:focus:ring-blue-800">
+                  <Link to={`/edit/${item.id}`} className="inline-flex items-center p-[0.5rem] py-2 float-right text-sm font-medium text-center text-black bg-white rounded-lg hover:bg-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-orange-600 dark:hover:bg--700 dark:focus:ring-blue-800">
                     Edit Card
                   </Link>
-                  <button onClick={() => handledelete(item.id)} className="inline-flex items-center px-3 py-2 float-right text-sm font-medium text-center text-black bg-red-700 rounded-lg hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-red-600 dark:red:bg-blue-700 dark:focus:ring-red-800">
+                  <button onClick={() => handledelete(item.id)} className="inline-flex items-center p-[0.5rem] py-2 float-right text-sm font-medium text-center text-black bg-red-700 rounded-lg hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-red-600 dark:red:bg-blue-700 dark:focus:ring-red-800">
                     Delete
                   </button>
                 </div>

@@ -6,7 +6,10 @@ const BookList = ({books,setBooks}) => {
 
   const [serachInput,setSerachInput] = useState("")
 
-  const seachFilterData = books.filter((item) => item.title.toLowerCase().includes(serachInput.toLowerCase()));
+  const seachFilterData = books.filter((item) => {
+    const title = typeof item.title === "string" ? item.title : "";
+    return title.toLowerCase().includes(serachInput.toLowerCase())
+  });
 
 
   return (
