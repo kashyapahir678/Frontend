@@ -23,7 +23,7 @@ const Breadcrumb = () => {
 
   const printpath = filterpath.map((item) => {
 
-    console.log(item.length >= 1 ? "" : "/")
+    // console.log(item.length >= 1 ? "" : "/")
 
     pageLink += `/${item}`
     return(

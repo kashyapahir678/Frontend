@@ -30,8 +30,10 @@ export const ProductLoader = async({params}) => {
    const response = await fetch(`https://fakestoreapi.com/products/${id}`);
 
    if(!response.ok){
-     throw Error("Product not found")
+     throw new Error("Product not found")
    }
+   
+
    
    return response.json();
 }
@@ -41,31 +43,3 @@ export const ProductLoader = async({params}) => {
 export default ProductId
 
 
-
-// const [product, setProduct] = useState(null);
-// const [loading, setLoading] = useState(true);
-// const [error, setError] = useState(null);
-
-// useEffect(() => {
-//   const fetchProduct = async () => {
-//     try {
-//       const res = await axios.get(`https://fakestoreapi.com/products/${id}`)
-//       if(!res.ok){
-//         throw new Response("Product not found", { status: 404 });
-//       }
-//       else{
-//         setProduct(res.data)
-//         console.log(res)
-//         setLoading(false)
-//       }
-//     }
-//     catch (err) {
-//       setError("Failed to fetch product details.");
-//       setLoading(false);
-//     }
-//   }
-//   fetchProduct();
-// }, [])
-
-// if (loading) return <p>Loading...</p>;
-// if (error) return <p>{error}</p>;
