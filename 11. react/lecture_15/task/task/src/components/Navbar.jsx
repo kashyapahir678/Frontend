@@ -8,19 +8,21 @@ const Navbar = () => {
 
   return (
     <div className='navbar'>
-      <ul>
-        <Link to="/">Home</Link>
-        <Link to="/about">About</Link>
-        <Link to="/product">Product</Link>
+      <ul className='flex items-center gap-10 mb-1 bg-sky-900 text-white'>
+        <Link className='py-2 p-4' to="/">Home</Link>
+        <Link className='py-2 p-4' to="/about">About</Link>
+        <Link className='py-2 p-4' to="/product">Product</Link>
 
-        {isAuth == true && <span style={{color: "white"}}>Welcome {user.username}</span>}
+        {isAuth == true && <span >Welcome {user.username}</span>}
 
         {
           isAuth === true ?
-            <Link to="/logout" onClick={() => setIsAuth(false)}>Logout</Link>
+            <Link className='py-2 p-4' to="/logout" onClick={() => setIsAuth(false)}>Logout</Link>
             :
-            <Link to="/login">Login</Link>
+            <Link className='py-2 p-4' to="/login">Login</Link>
         }
+        
+        
       </ul>
       <main>
         <Outlet />

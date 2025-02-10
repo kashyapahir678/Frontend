@@ -20,11 +20,11 @@ const Contact = () => {
         <>
             <div className='product'>
 
-                <div className='usercard'>
+                <div className='flex items-center justify-between flex-wrap'>
                     {
                         user.map((item, index) => {
                             return (
-                                <div key={index}>
+                                <div key={index} className='grow-1 w-[300px] min-h-[300px] h-auto border-2 border-black'>
                                     <img src={item.image} alt="" />
                                     <h2>{item.title}</h2>
                                     <p>{item.description.slice(0, 40)}</p>
